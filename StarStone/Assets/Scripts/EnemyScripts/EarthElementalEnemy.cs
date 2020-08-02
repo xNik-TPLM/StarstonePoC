@@ -14,6 +14,7 @@ public class EarthElementalEnemy : EnemyBase
     //Earth Elemental Properties
     //Float Properties
     [Header("Earth Elemental Properties")]
+    [Tooltip("This is the amount health the enemy will be regenerated per second")]
     public float RegeneratedHealth; //This is the amount of health points the enemy will regerenate per second
 
     //Override this function to add the regenerate health function
@@ -38,13 +39,15 @@ public class EarthElementalEnemy : EnemyBase
     public override void EnemyDamaged(float damage, int projectileType)
     {
         base.EnemyDamaged(damage, projectileType);
-        switch(projectileType)
+
+        //The projectile type will determine what sort of damage will it do this enemy
+        switch (projectileType)
         {
-            case 1:
+            case 1: //Earth orijectile will deal normal damage
                 CurrentHealth -= damage;
                 break;
 
-            case 2:
+            case 2: //Fire projectile will deal normal damage, with the addition of burning damage
                 CurrentHealth -= damage;
                 m_isEnemyBurning = true;
                 break;

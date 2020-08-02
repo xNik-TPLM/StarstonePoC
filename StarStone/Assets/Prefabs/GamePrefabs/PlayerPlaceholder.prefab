@@ -437,9 +437,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ebad2ee51deb0c446b8cb3640e4a99b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: 6
-  returnSpeed: 25
-  RecoilRotation: {x: 2, y: 2, z: 2}
+  RotationSpeed: 6
+  ReturnSpeed: 25
+  RecoilRotationMaxRange: {x: 2, y: 2, z: 2}
 --- !u!1 &1865213356284460600
 GameObject:
   m_ObjectHideFlags: 0

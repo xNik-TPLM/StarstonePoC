@@ -930,6 +930,66 @@ PrefabInstance:
       propertyPath: UseHitscan
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4299046254906867783, guid: 60b5e663693a4374b96e44b9caa65eae,
+        type: 3}
+      propertyPath: WeaponPositionPoint
+      value: 
+      objectReference: {fileID: 1919668212}
+    - target: {fileID: 4299046254906867783, guid: 60b5e663693a4374b96e44b9caa65eae,
+        type: 3}
+      propertyPath: WeaponRotationPoint
+      value: 
+      objectReference: {fileID: 1641425552}
+    - target: {fileID: 4299046254906867783, guid: 60b5e663693a4374b96e44b9caa65eae,
+        type: 3}
+      propertyPath: PositionalRecoilSpeed
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4299046254906867783, guid: 60b5e663693a4374b96e44b9caa65eae,
+        type: 3}
+      propertyPath: RotationalRecoilSpeed
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4299046254906867783, guid: 60b5e663693a4374b96e44b9caa65eae,
+        type: 3}
+      propertyPath: PositionalReturnSpeed
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 4299046254906867783, guid: 60b5e663693a4374b96e44b9caa65eae,
+        type: 3}
+      propertyPath: RotationalReturnSpeed
+      value: 38
+      objectReference: {fileID: 0}
+    - target: {fileID: 4299046254906867783, guid: 60b5e663693a4374b96e44b9caa65eae,
+        type: 3}
+      propertyPath: RecoilKickBackMaxRange.x
+      value: 0.006
+      objectReference: {fileID: 0}
+    - target: {fileID: 4299046254906867783, guid: 60b5e663693a4374b96e44b9caa65eae,
+        type: 3}
+      propertyPath: RecoilKickBackMaxRange.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4299046254906867783, guid: 60b5e663693a4374b96e44b9caa65eae,
+        type: 3}
+      propertyPath: RecoilKickBackMaxRange.z
+      value: -0.0006
+      objectReference: {fileID: 0}
+    - target: {fileID: 4299046254906867783, guid: 60b5e663693a4374b96e44b9caa65eae,
+        type: 3}
+      propertyPath: RecoilRotationMaxRange.x
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4299046254906867783, guid: 60b5e663693a4374b96e44b9caa65eae,
+        type: 3}
+      propertyPath: RecoilRotationMaxRange.z
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4299046254906867783, guid: 60b5e663693a4374b96e44b9caa65eae,
+        type: 3}
+      propertyPath: RecoilRotationMaxRange.y
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 5803716423178515917, guid: 60b5e663693a4374b96e44b9caa65eae,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -1057,6 +1117,61 @@ PrefabInstance:
         type: 3}
       propertyPath: WeaponClipSize
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7749274828543511736, guid: 60b5e663693a4374b96e44b9caa65eae,
+        type: 3}
+      propertyPath: WeaponPositionPoint
+      value: 
+      objectReference: {fileID: 1919668212}
+    - target: {fileID: 7749274828543511736, guid: 60b5e663693a4374b96e44b9caa65eae,
+        type: 3}
+      propertyPath: WeaponRotationPoint
+      value: 
+      objectReference: {fileID: 1641425552}
+    - target: {fileID: 7749274828543511736, guid: 60b5e663693a4374b96e44b9caa65eae,
+        type: 3}
+      propertyPath: PositionalRecoilSpeed
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7749274828543511736, guid: 60b5e663693a4374b96e44b9caa65eae,
+        type: 3}
+      propertyPath: RotationalRecoilSpeed
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7749274828543511736, guid: 60b5e663693a4374b96e44b9caa65eae,
+        type: 3}
+      propertyPath: PositionalReturnSpeed
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 7749274828543511736, guid: 60b5e663693a4374b96e44b9caa65eae,
+        type: 3}
+      propertyPath: RotationalReturnSpeed
+      value: 38
+      objectReference: {fileID: 0}
+    - target: {fileID: 7749274828543511736, guid: 60b5e663693a4374b96e44b9caa65eae,
+        type: 3}
+      propertyPath: RecoilKickBackMaxRange.x
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7749274828543511736, guid: 60b5e663693a4374b96e44b9caa65eae,
+        type: 3}
+      propertyPath: RecoilKickBackMaxRange.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7749274828543511736, guid: 60b5e663693a4374b96e44b9caa65eae,
+        type: 3}
+      propertyPath: RecoilKickBackMaxRange.z
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7749274828543511736, guid: 60b5e663693a4374b96e44b9caa65eae,
+        type: 3}
+      propertyPath: RecoilRotationMaxRange.x
+      value: 0.005
+      objectReference: {fileID: 0}
+    - target: {fileID: 7749274828543511736, guid: 60b5e663693a4374b96e44b9caa65eae,
+        type: 3}
+      propertyPath: RecoilRotationMaxRange.z
+      value: -0.0005
       objectReference: {fileID: 0}
     - target: {fileID: 8651433765437241241, guid: 60b5e663693a4374b96e44b9caa65eae,
         type: 3}
@@ -1266,13 +1381,13 @@ MonoBehaviour:
     MaxEnemiesInWave: 15
     RateToSpwanShooter: 5
     WaveTime: 90
-  SpawnRate: 0.5
-  WaveCooldown: 1
-  MaxEnemiesOnMap: 5
   SpawnPoints:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  SpawnRate: 0.5
+  WaveCooldown: 1
+  MaxEnemiesOnMap: 5
   EnemyToSpawn: {fileID: 0}
   WindElementalEnemy: {fileID: 4076921026306919797, guid: c02eb9eb012f5ae4dbb45340f058791a,
     type: 3}

@@ -131,13 +131,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5895c198e4f0fe547909580fa002876e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DetinationTimer: 2
   CurrentHealth: 100
   MaxHealth: 100
-  EnemySpeed: 10
+  MaxEnemySpeed: 0
   HealthBarUI: {fileID: 4282647412271146099}
   HealthBarSlider: {fileID: 9038548905602979533}
-  Target: {fileID: 0}
+  BurningTime: 5
+  BurnDamage: 5
+  MaxDetonationTime: 1
 --- !u!65 &2450158184775920901
 BoxCollider:
   m_ObjectHideFlags: 0

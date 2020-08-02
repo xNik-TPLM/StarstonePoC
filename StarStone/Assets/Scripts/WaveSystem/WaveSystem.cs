@@ -6,7 +6,7 @@ using UnityEngine;
 /// This script controls the waves throughout the game.
 /// It cotnrols beginning state, where enemies start to spawn. The completion of the wave to initate the next wave or fail the wave, and if the intermission phase of the game
 /// Worked by: Nikodem Hamrol
-/// References: 
+/// References: Single Sapling Games. (2019). Wave System - FPS Game In Unity - Part 63 [online]. Available: https://www.youtube.com/watch?v=gtVQDqFdabs [Last Accessed 29th July 2020].
 /// </summary>
 
 public class WaveSystem : MonoBehaviour
@@ -25,33 +25,33 @@ public class WaveSystem : MonoBehaviour
     //Static fields
     public static bool InIntermission; //This static boolean field will be used to check if the player is still in the intermission phase
     public static float WaveTimer; //This static float field is to count down the time of the wave and to be used to show in the player's HUD
-
-    //Static integer fields
     public static int EnemiesOnMap; //This counts the amount of enemies currently on the map, which will be used to limit the amount of enemies on the map
     public static int WaveNumberIndex; //This is the index for the waves array, which were all the data is stored
 
     //Wave system properties
     [Header("Waves")]
+    [Tooltip("This array is the data for each wave, entering the size of the array, will add more waves")]
     public WavesData[] waves; //This array takes all of the data that a wave has, which will be used to define what each wave is
-    [Space(10)]
-
-    //Float properties
-    public float SpawnRate; //This is the spawn rate at which the enmies will spawn in seconds
-    public float WaveCooldown; //This is the time between waves
-
-    //This integer property is the max enemies that can be on the map
-    public int MaxEnemiesOnMap; 
-    
 
     [Header("Spawn Points")]
     public GameObject[] SpawnPoints; //This an array of all spawnn points on the map
-    [Space(10)]
 
+    [Header("General Wave Properties")]
+    [Tooltip("This is the rate that the enemies will spawn in")]
+    public float SpawnRate; //This is the spawn rate at which the enmies will spawn in seconds
+    [Tooltip("This is the time to initiate the next wave")]
+    public float WaveCooldown; //This is the time between waves
+    [Tooltip("This is the amount of enemies that is allowed on the map")]
+    public int MaxEnemiesOnMap; //Max enemies that can be on the map
+    
     [Header("Enemy Types")]
+    [Tooltip("The enemy that will spawn. Only for debugging")]
     public GameObject EnemyToSpawn; //This game object is the enemy that will be spawned on the map
 
     //This is a list of all elemental enemy prefabs that will be used to spawn onto the map. It was done this way, so that there is a reference to each enemy
+    [Tooltip("The wind enemy prefab")]
     public GameObject WindElementalEnemy;
+    [Tooltip("The fire enemy prefab")]
     public GameObject FireElementalEnemy;
 
 

@@ -29,19 +29,27 @@ public class EnemyBase : MonoBehaviour
     protected NavMeshAgent m_enemyNavMesh;
 
     //Enemy properties    
-    //Float properties
+    [Header("Health Properties")]
+    [Tooltip("The current amount of health the enemy has. Debugging purposes")]
     public float CurrentHealth; //This keeps track of how much health does the enemy have
+    [Tooltip("The maximum health the enemy will have")] 
     public float MaxHealth; //This sets the max health of an enemy
-    public float EnemySpeed; //This sets the speed of our enemy
-    public float BurningTime; //This sets the burning time of our enemy
 
-    //This integer sets the burning damage of our enemy
-    public int BurnDamage; 
+    [Header("Speed Properties")]
+    [Tooltip("The maximum speed the enemy will move around the map")]
+    public float MaxEnemySpeed; //This sets the speed of our enemy
 
-    //Unity properties
+    [Header("UI")]
+    [Tooltip("The canvas that is attached to enemy")]
     public GameObject HealthBarUI; //This is the reference to the canvas of our health bar so that we can deactivate it when health is full
+    [Tooltip("The Slider that is attached to the enemy's canvas")]
     public Slider HealthBarSlider; //this is the reference to the slider, which change the value of the slider
-    
+
+    [Header("Elemental Effects")]
+    [Tooltip("This is the maximum time the enemy will burn for")]
+    public float BurningTime; //This sets the burning time of our enemy
+    [Tooltip("This the amount of damage that burning will deal per second")]
+    public int BurnDamage; //This sets the burning damage per second of our enemy
 
     // Start is called before the first frame update
     protected virtual void Start()
@@ -106,7 +114,7 @@ public class EnemyBase : MonoBehaviour
     //This function will handle the behaviour of each enemy, this will be overriden, to match elemental enemy's behaviour
     protected virtual void EnemyBehaviour()
     {
-        m_enemyNavMesh.speed = EnemySpeed; //Set speed for the Navmesh agent. Using the speed property to set the navmesh will be simpler, instead of scrolling through a load of navmesh agent properties
+        m_enemyNavMesh.speed = MaxEnemySpeed; //Set speed for the Navmesh agent. Using the speed property to set the navmesh will be simpler, instead of scrolling through a load of navmesh agent properties
         Vector3 targetPosition = Target.position; //Set the target position to the position of the player
 
         //If the player is not in range, then set the destination of the player's location
