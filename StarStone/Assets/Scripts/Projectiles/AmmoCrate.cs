@@ -2,25 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+///// <summary>
+///// This script handles the ammo crate to provide the player with more ammo
+///// Worked By: Ben Smith
+///// </summary>
 public class AmmoCrate : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    // This checks whether the player has picked up the crate
     private void OnTriggerEnter(Collider collider)
     {
         if (collider.CompareTag("Player"))
         {
-            GetComponent<WeaponBase>().MaxAmmo += 100;
-            gameObject.SetActive(false);
+            FindObjectOfType<WeaponBase>().MaxAmmo += 10; // This adds the ammo to the player's weapon
+            gameObject.SetActive(false); // This hides the crate once used
         }
     }
 }
