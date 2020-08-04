@@ -133,7 +133,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CurrentHealth: 100
   MaxHealth: 100
-  MaxEnemySpeed: 0
+  MaxEnemySpeed: 10
   HealthBarUI: {fileID: 4282647412271146099}
   HealthBarSlider: {fileID: 9038548905602979533}
   BurningTime: 5
