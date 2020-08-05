@@ -10,47 +10,55 @@ using UnityEngine;
 /// </summary>
 public class PlayerController : MonoBehaviour
 {
-    //Private fields
+    [Header("Knife Properties")]
+    [Tooltip("Knife")]
+    public GameObject Knife; //This sets the reference to the melee weapon
+    [Tooltip("Knife Position")]
+    public static Transform KnifeStartPosition;
+
+    [Header("Ladder Properties")]
+    private bool m_ladderCollision;
+    private bool ladderBottom; //Collider to check if the player has entered to move up ladder
+    private bool ladderTop; //Collider to check if the player has entered to move down ladder
+    [Tooltip("Ladder speed")]
+    public float ladderSpeed; //Speed of the player moving on the ladder
+
+    [Header("Ground Properties")]
     //This bool will check if the player is on the ground
     private bool m_isGrounded;
-    private bool m_ladderCollision;
+    public LayerMask GroundType; //The layer in the scene, which is used to check if the player is on the ground
 
-    //public static bool meleeActive; //This bool checks whether the player is melee attacking
-    public GameObject Knife; //This sets the reference to the melee weapon
-    public GameObject playerShield;
-
+    //Player properties
     //Float fields
+    [Header("Player Movement And Properties")]
+    [Tooltip("Player Velocity")]
+    public Vector3 m_playerVelocity;
+    [Tooltip("Player Shield")]
+    public GameObject playerShield;
+    [Tooltip("Player Movement Speed")]
+    public float PlayerMovementSpeed; //Speed of the player movement
+    [Tooltip("Player Jump Force")]
+    public float PlayerJumpForce; //The force of Player's jump
+    [Tooltip("Gravity")]
+    public float PlayerGravityForce; //The gravity force of the player
+    public float GroundCheckRadius = 0.4f; //The radius to check if the player's still on the ground
+    [Tooltip("Player max health")]
+    public int maxHealth = 100; //The player's max health
+    [Tooltip("Player health")]
+    public int currentHealth; //The player's health
+    public int damage;
+    [Tooltip("Player position")]
+    public Transform PlayerFeetPosition; //Position of the player's feet to check if player is grounded
+    [Tooltip("Player")]
+    public CharacterController CharacterController; //Reference to the character controller for movement and changing height of the collider
+    [Tooltip("Player")]
+    public GameObject Player; //Reference to the palyer model
+
+    //Private fields
     //These floats will get the reference of axis of where the player will move.
     private float m_moveInputX;
     private float m_moveInputZ;
 
-    //This is to set velocity of the player moving around
-    public Vector3 m_playerVelocity;
-
-    private bool ladderBottom; //Collider to check if the player has entered to move up ladder
-    private bool ladderTop; //Collider to check if the player has entered to move down ladder
-    public float ladderSpeed; //Speed of the player moving on the ladder
-
-    //Player properties
-    //Float properties
-    public float PlayerMovementSpeed; //Speed of the player movement
-    public float PlayerJumpForce; //The force of Player's jump
-    public float PlayerGravityForce; //The gravity force of the player
-    public float GroundCheckRadius = 0.4f; //The radius to check if the player's still on the ground
-    public int maxHealth = 100;
-    public int currentHealth;
-    public int damage;
-
-    //Transform properties
-    public Transform PlayerFeetPosition; //Position of the player's feet to check if player is grounded
-
-    //Unity properties
-    public CharacterController CharacterController; //Reference to the character controller for movement and changing height of the collider
-    public GameObject Player; //Reference to the palyer model
-    public LayerMask GroundType; //The layer in the scene, which is used to check if the player is on the ground
-
-
-    public static Transform KnifeStartPosition;
 
     // Start is called before the first frame update
     void Start()
