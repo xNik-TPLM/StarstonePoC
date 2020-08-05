@@ -28,7 +28,7 @@ public class OffensiveAbility : MonoBehaviour
     void Update()
     {
         // This checks whether the player has pressed the offensive ability key
-        if (Input.GetKeyDown(KeyCode.O))
+        if (Input.GetButtonDown("Offensive Ability"))
         {
                 Explode(); // This runs the nuke function
         }

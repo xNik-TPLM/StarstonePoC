@@ -28,7 +28,7 @@ public class PrototypeWeapon : WeaponBase
         if (CurrentAmmo > 0)
         {
             //When the player fires their prototype weapon
-            if (Input.GetMouseButtonDown(0))
+            if (Input.GetButtonDown("Fire1"))
             {
                 //Instantiate the projectile and decrement ammo by one
                 GameObject projectile = Instantiate(ProjectileToFire);

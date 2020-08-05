@@ -41,7 +41,7 @@ public class CameraRecoilMovement : MonoBehaviour
     void Update()
     {
         //If the player shoots their weapon and if it has ammo loaded, it wll the camera holder up and pick a random range berween the y and z (slide and tilt) from negative to positive to rotate to
-        if (Input.GetMouseButtonDown(0) && GetComponentInChildren<WeaponBase>().CurrentAmmo > 0)
+        if (Input.GetButtonDown("Fire1") && GetComponentInChildren<WeaponBase>().CurrentAmmo > 0)
         {
             m_currentCameraHolderRotation += new Vector3(-RecoilRotationMaxRange.x, Random.Range(-RecoilRotationMaxRange.y, RecoilRotationMaxRange.y), Random.Range(-RecoilRotationMaxRange.z, RecoilRotationMaxRange.z));
         }      

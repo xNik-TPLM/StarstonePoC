@@ -32,23 +32,6 @@ public class PlayerUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // Once the player takes damage, they will lose health depending on whether the shield has been enabled or not
-        if (Input.GetKeyDown(KeyCode.P))
-        {
-            if (shieldSlider.value > 0)
-            {
-                shieldSlider.value -= 0.1f; // This lowers the shield value once damage has been taken
-            }
-            else
-            {
-                healthSlider.value -= 0.1f; // This lowers the health value once damage has been taken
-            }
-        }
-        if (shieldActive == true)
-        {
-
-            gameObject.SetActive(false);
-        }
 
         ammoDisplay.text = FindObjectOfType<WeaponBase>().CurrentAmmo.ToString(); // This displays the current ammo left in the clip as a part of the player's HUD
         maxAmmo.text = FindObjectOfType<WeaponBase>().MaxAmmo.ToString(); // This displays the maximum ammo left in the weapon as a part of the player's HUD

@@ -103,7 +103,7 @@ public class WeaponBase : MonoBehaviour
         {
             ///Automatic weapon solution
             //If player holds down the left mouse button and if it is time to fire and if the player is not reloading
-            /*if (Input.GetMouseButton(0) && Time.time >= m_fireTime && m_isWeaponReloading == false)
+            /*if (Input.GetMouseButton("Fire1") && Time.time >= m_fireTime && m_isWeaponReloading == false)
             {
                 IsFiring = true;
 
@@ -124,7 +124,7 @@ public class WeaponBase : MonoBehaviour
 
             ///Semi-automatic weapon solution
             //If the player presses the left mouse button and if the player is not reloading
-            if (Input.GetMouseButtonDown(0))
+            if (Input.GetButtonDown("Fire1"))
             {
                 //Decrement the ammo by 1
                 CurrentAmmo -= 1;

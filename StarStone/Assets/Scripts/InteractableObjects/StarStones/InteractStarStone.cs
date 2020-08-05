@@ -34,7 +34,7 @@ public class InteractStarStone : MonoBehaviour
         if (trigger.CompareTag("Player"))
         {
             //When the player presses E to interact
-            if (Input.GetKey(KeyCode.E))
+            if (Input.GetButtonDown("Interact"))
             {
                 //Based on the name of the Starstone elemental, set the Starstone ID to use that elemental projectile
                 switch (gameObject.name)

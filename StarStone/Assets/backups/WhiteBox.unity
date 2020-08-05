@@ -2004,6 +2004,16 @@ PrefabInstance:
       propertyPath: PlayerJumpForce
       value: 20
       objectReference: {fileID: 0}
+    - target: {fileID: 5803716423178515917, guid: 60b5e663693a4374b96e44b9caa65eae,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5803716423178515917, guid: 60b5e663693a4374b96e44b9caa65eae,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6836557706347718234, guid: 60b5e663693a4374b96e44b9caa65eae,
         type: 3}
       propertyPath: m_Name

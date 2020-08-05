@@ -81,7 +81,7 @@ public class PlayerController : MonoBehaviour
     // Once the player presses the attack key, The knife will be enabled
     private void Melee()
     {
-        if (Input.GetKeyDown(KeyCode.Q))
+        if (Input.GetButtonDown("Melee"))
         {
             Knife.SetActive(true); // This enables the knife
         }
@@ -90,7 +90,7 @@ public class PlayerController : MonoBehaviour
     // If the player uses the defensive ability, the player's shield will be enabled
     private void ShieldActive()
     {
-        if (Input.GetKeyDown(KeyCode.L))
+        if (Input.GetButtonDown("Defensive Ability"))
         {
             playerShield.SetActive(true); // This enables the player's shield
         }
@@ -103,7 +103,7 @@ public class PlayerController : MonoBehaviour
         if (collision.CompareTag("LadderBottom"))
         {
             // Once the player uses the 'use' key, the player will automatically move up or down the ladder relative to where they are once activated
-            if (Input.GetKeyDown(KeyCode.E))
+            if (Input.GetButtonDown("Interact"))
             {
                 m_ladderCollision = true; // This shows when the player is on/using the ladder
                 ladderBottom = true; // This checks if the player is at the bottom of the ladder so the player can move in the right direction
@@ -115,7 +115,7 @@ public class PlayerController : MonoBehaviour
         }
         if (collision.CompareTag("LadderTop"))
         {
-            if (Input.GetKeyDown(KeyCode.E))
+            if (Input.GetButtonDown("Interact"))
             {
                 ladderTop = true; // This checks if the player is at the top of the ladder so the player can move in the right direction
             }
@@ -123,16 +123,6 @@ public class PlayerController : MonoBehaviour
         else
         {
             ladderTop = false;
-        }
-        if (collision.CompareTag("StarStone"))
-        {
-            if (Input.GetKeyDown(KeyCode.E))
-            {
-                PlayerUI.shieldActive = true;
-                Debug.Log("Works!!!!!");
-                
-                currentHealth -= damage;
-            }
         }
     }
     // Once the player is no longer on/using the ladder, they can longer press the 'use' key
