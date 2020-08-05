@@ -10,8 +10,12 @@ using UnityEngine;
 public class OffensiveAbility : MonoBehaviour
 {
     // Public float variables
+    [Header("Offensive Ability Properties")]
+    [Tooltip("Radius of the Offensive Ability")]
     public float radius = 5f; //  This sets the radius at which the nuke affects
+    [Tooltip("Impact force of the Offensive Ability")]
     public float force = 700f; // This sets the amount of force that the objects within the radius will experience
+    [Tooltip("Damage of the Offensive Ability")]
     public float nukeDamage; // This sets the damage that the nuke has on enemies
 
     // Start is called before the first frame update
