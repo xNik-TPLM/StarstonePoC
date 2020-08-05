@@ -13,7 +13,6 @@ public class PlayerController : MonoBehaviour
     [Header("Knife Properties")]
     [Tooltip("Knife")]
     public GameObject Knife; //This sets the reference to the melee weapon
-    [Tooltip("Knife Position")]
     public static Transform KnifeStartPosition;
 
     [Header("Ladder Properties")]
@@ -95,7 +94,6 @@ public class PlayerController : MonoBehaviour
             playerShield.SetActive(true); // This enables the player's shield
         }
     }
-
 
     //This checks if the player has collided with the ladder
     private void OnTriggerStay(Collider collision)

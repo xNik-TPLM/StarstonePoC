@@ -16,7 +16,6 @@ public class PlayerUI : MonoBehaviour
     public Text maxAmmo; // This displays the maximum ammo that is left that the player has
 
     [Header("Shield Slider And Properties")]
-    [Tooltip("This checks whether the shield has been used")]
     public static bool shieldActive; // This checks if the shield is currently enabled
     public Slider shieldSlider; // This sets a reference for the shield bar
 
